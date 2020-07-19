@@ -1,0 +1,59 @@
+﻿@{
+
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@{
+
+    List<FinalProjectShopLaptop.Models.NhomSanPham> listNhomSP = ViewBag.NhomSP;
+    List<FinalProjectShopLaptop.Models.Hang> listHang = ViewBag.Hang;
+    List<FinalProjectShopLaptop.Models.SanPham> listSanPham = ViewBag.SanPham;
+
+}
+
+<div class="content">
+
+    <div class="content_top">
+        <div class="heading">
+            <h3>Sản phẩm mới</h3>
+        </div>
+        <div class="see">
+            <p><a href="/">See all Products</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="section group">
+        @foreach (var item in listSanPham)
+        {
+            var url = "/SanPham/Detail/" + item.Id;
+            <div class="grid_1_of_4 images_1_of_4">
+                @Html.LabelFor(model => item.ImagePath, new { @class = "control-label col-md-2" })
+                <a href="@url"> <img src="@Url.Content(item.ImagePath)" style="margin:10px" height="200" width="200" id="imagePreview" /></a>
+
+                <h2>@item.Ten</h2>
+                 <h2>@item.NhomSanPham.Ten</h2>
+
+
+
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees">@item.Price</span></p>
+                    </div>
+
+                    <div class="add-cart">
+                        <h4><a href="/Cart/AddItem?productId=@item.Id&quantity=1">Thêm vào giỏ</a></h4>
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>

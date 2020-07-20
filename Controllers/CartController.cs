@@ -1,6 +1,7 @@
 ﻿using FinalProjectShopLaptop.DAL;
 using FinalProjectShopLaptop.Helper;
 using FinalProjectShopLaptop.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -119,6 +120,8 @@ namespace FinalProjectShopLaptop.Controllers
         public ActionResult Payment()
         {
             var cart = Session[CartSession];
+            var userId = User.Identity.GetUserId<string>();
+
             var list = new List<CartItem>();
             if (cart != null)
             {

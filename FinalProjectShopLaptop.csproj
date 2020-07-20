@@ -225,6 +225,10 @@
     <Compile Include="Migrations\202007191332430_updatetralbev1x.Designer.cs">
       <DependentUpon>202007191332430_updatetralbev1x.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007200159148_v1xfi.cs" />
+    <Compile Include="Migrations\202007200159148_v1xfi.Designer.cs">
+      <DependentUpon>202007200159148_v1xfi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CartItem.cs" />
@@ -403,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007191332430_updatetralbev1x.resx">
       <DependentUpon>202007191332430_updatetralbev1x.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007200159148_v1xfi.resx">
+      <DependentUpon>202007200159148_v1xfi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

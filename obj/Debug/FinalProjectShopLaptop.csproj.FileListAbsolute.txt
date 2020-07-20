@@ -115,3 +115,5 @@ D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.csproj
 D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.dll
 D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.pdb
 D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.Migrations.updatetralbev1x.resources
+D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.Migrations.v1xfi.resources
+D:\DESIGN PATTERN\FinalProjectShopLaptop\obj\Debug\FinalProjectShopLaptop.csprojAssemblyReference.cache

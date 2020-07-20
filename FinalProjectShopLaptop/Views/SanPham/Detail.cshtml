@@ -1,0 +1,144 @@
+﻿@model FinalProjectShopLaptop.Models.SanPham
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+
+    <script src="~/Scripts/sanPhamFav.js"></script>
+}
+
+@{
+    FinalProjectShopLaptop.Models.SanPham sanPham = ViewBag.sanPham;
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhomSanPham.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhomSanPham.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hang.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hang.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ram)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ram)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Card)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Card)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KichThuocManHinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KichThuocManHinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            <img src="@Url.Content(Model.ImagePath)" style="margin:10px" height="200" width="200" id="imagePreview" />
+        </dt>
+
+    </dl>
+</div>
+
+<p>
+
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+    <a class="glyphicon-baby-formula alert-link bg-success" href="/Home/Index"> Home </a>
+    <!-- yêu thích-->
+    <div class="someButton col-lg-12 row">
+        <div class="col-lg-3" id="favorite">
+            @if (ViewBag.inFavorite == true)
+            {
+                <img src="@Url.Content("~/Assets/image/icon/daThich.png")" id="imgLike" /><span>Yêu thích</span>
+            }
+            else
+            {
+                <img src="@Url.Content("~/Assets/image/icon/chuaThich.png")" id="imgLike" /><span>Yêu thích</span>
+            }
+        </div>
+    </div>
+
+</p>
+
+@*@if (ViewBag.exist == false)
+    {
+        <input type="hidden" value="0" id="Logged"/>
+    }
+    else
+    {
+        <input type="hidden" value="1" id="Logged"/>
+    }*@
+
+<script>
+    var currentSanPham = @sanPham.Id;
+</script>
